@@ -1,21 +1,25 @@
 # Sngleton Design Pattern implemented in Java
 
-In object-oriented programming, the decorator pattern is a design pattern that allows behavior to be added to an individual object, dynamically, without affecting the behavior of other objects from the same class. The decorator pattern is often useful for adhering to the Single Responsibility Principle, as it allows functionality to be divided between classes with unique areas of concern. The decorator pattern is structurally nearly identical to the chain of responsibility pattern, the difference being that in a chain of responsibility, exactly one of the classes handles the request, while for the decorator, all classes handle the request.
+In software engineering, the singleton pattern is a software design pattern that restricts the instantiation of a class to one "single" instance. This is useful when exactly one object is needed to coordinate actions across the system. The term comes from the mathematical concept of a singleton.
 
-## What problems can it solve?[edit]
-- Responsibilities should be added to (and removed from) an object dynamically at run-time.
-- A flexible alternative to subclassing for extending functionality should be provided.
+Critics consider the singleton to be an anti-pattern in that it is frequently used in scenarios where it is not beneficial, introduces unnecessary restrictions in situations where a sole instance of a class is not actually required, and introduces global state into an application.
 
-When using subclassing, different subclasses extend a class in different ways. But an extension is bound to the class at compile-time and can't be changed at run-time.
+## Overview
+The singleton design pattern is one of the twenty-three well-known "Gang of Four" design patterns that describe how to solve recurring design problems to design flexible and reusable object-oriented software, that is, objects that are easier to implement, change, test, and reuse.
 
-## What solution does it describe?[edit]
+### The singleton design pattern solves problems like:
 
-Define Decorator objects that
+- How can it be ensured that a class has only one instance?
+- How can the sole instance of a class be accessed easily?
+- How can a class control its instantiation?
+- How can the number of instances of a class be restricted?
 
-- implement the interface of the extended (decorated) object (Component) transparently by forwarding all requests to it and
-- perform additional functionality before/after forwarding a request.
+### The singleton design pattern describes how to solve such problems:
 
-This enables to work through different Decorator objects to extend the functionality of an object dynamically at run-time. 
-See also the UML class and sequence diagram below.
+- Hide the constructor of the class.
+- Define a public static operation (getInstance()) that returns the sole instance of the class.
+- The key idea in this pattern is to make the class itself responsible for controlling its instantiation (that it is instantiated only once).
+- The hidden constructor (declared private) ensures that the class can never be instantiated from outside the class.
+- The public static operation can be accessed easily by using the class name and operation name (Singleton.getInstance()).
 
 Source: (Wikipedia)
