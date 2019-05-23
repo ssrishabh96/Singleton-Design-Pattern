@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/4_Singleton_Design_Pattern.iml" filepath="$PROJECT_DIR$/4_Singleton_Design_Pattern.iml" />
+      <module fileurl="file://$PROJECT_DIR$/method1_lazyinstantiation/method1_lazyinstantiation.iml" filepath="$PROJECT_DIR$/method1_lazyinstantiation/method1_lazyinstantiation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/method2_always_available_instance/method2_always_available_instance.iml" filepath="$PROJECT_DIR$/method2_always_available_instance/method2_always_available_instance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/method3_threadsafe/method3_threadsafe.iml" filepath="$PROJECT_DIR$/method3_threadsafe/method3_threadsafe.iml" />
     </modules>
   </component>
 </project>
